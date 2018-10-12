@@ -1,0 +1,15 @@
+applications:
+  #Application name
+- name: spring-ADFS-POC
+  instances: 1
+  buildpack: java_buildpack_offline
+  memory: 1G
+  disk_quota: 2048M
+  #Application Build path
+  path: target\spring-security-client-0.0.1-SNAPSHOT.jar
+  env:
+        SKIP_SSL_VALIDATION: "true"
+        GRANT_TYPE: authorization_code
+        services:
+        #SSO Service name that needs to be binded[ADFS Enabled]
+        - Pandiyan-ADFS-SSO

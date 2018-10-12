@@ -1,0 +1,23 @@
+ssoServiceUrl: https://DomainName-dev.login.sys.cac.preview.pcf.DomainName.com
+security:
+  ignored: /favicon.ico, /, /authorization_code
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      accessTokenUri: https://DomainName-dev.login.sys.cac.preview.pcf.DomainName.com/oauth/token
+      userAuthorizationUri: https://DomainName-dev.login.sys.cac.preview.pcf.DomainName.com/oauth/authorize
+    resource:
+      jwt:
+        keyUri: https://DomainName-dev.login.sys.cac.preview.pcf.DomainName.com/token_keys
+      userInfoUri: https://DomainName-dev.login.sys.cac.preview.pcf.DomainName.com/userinfo
+      tokenInfoUri: https://DomainName-dev.login.sys.cac.preview.pcf.DomainName.com/check_token
+
+
+logging.level:
+  org.springframework.security: DEBUG
+
+
+spring:
+  thymeleaf:
+    cache: false
